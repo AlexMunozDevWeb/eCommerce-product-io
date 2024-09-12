@@ -1,0 +1,41 @@
+//Primary
+$orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+//Neutral
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // (with 75% opacity for lightbox background)
+
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('/fonts/KumbhSans-Bold.eot');
+  src: url('/fonts/KumbhSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/KumbhSans-Bold.woff2') format('woff2'),
+      url('/fonts/KumbhSans-Bold.woff') format('woff'),
+      url('/fonts/KumbhSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('/fonts/KumbhSans-Regular.eot');
+  src: url('/fonts/KumbhSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/KumbhSans-Regular.woff2') format('woff2'),
+      url('/fonts/KumbhSans-Regular.woff') format('woff'),
+      url('/fonts/KumbhSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1{
+  font-family: 'Kumbh Sans';
+  font-weight: bold;
+}
+
+p{ font-size: 16px; }

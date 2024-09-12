@@ -1,5 +1,5 @@
 import 'normalize.css';
-import './assets/styles/styles.scss';
+import './styles/styles.scss';
 import { Header } from './components/Header';
 
 function App() {
