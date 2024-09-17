@@ -1,0 +1,37 @@
+#pop-up{
+  position: absolute;
+  top: 0;
+  height: 100vh; width: 100vw;
+  z-index: -1;
+  
+  &.open{
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color .2s ease;
+    z-index: 0;
+
+    .menu-mobile{
+      background-color: white;
+      width: 70%; height: inherit;
+
+      > img{
+        cursor: pointer;
+        margin: 20px 0 0 20px;
+        width: 16px;
+      }
+      
+      ul.wrapper-links{
+        padding: 30px 20px 20px;
+
+        .single-link{
+          color: $black;
+          margin: 10px 0;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+      }
+    }
+
+  }
+
+}
