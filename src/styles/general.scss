@@ -21,6 +21,7 @@ $black: hsl(0, 0%, 0%); // (with 75% opacity for lightbox background)
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Kumbh Sans';
   src: url('/fonts/KumbhSans-Regular.eot');
@@ -33,9 +34,39 @@ $black: hsl(0, 0%, 0%); // (with 75% opacity for lightbox background)
   font-display: swap;
 }
 
-h1{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, p , ul, li{
   font-family: 'Kumbh Sans';
-  font-weight: bold;
 }
 
 p{ font-size: 16px; }
+
+ul{
+  li{
+    list-style: none;
+    color: $grayish-blue;
+  }
+}
+
+#root{
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 0 5%;
+  max-width: 1340px;
+  width: 100%;
+}
