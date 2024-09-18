@@ -134,34 +134,111 @@
       position: relative;
       gap: 18px;
 
-      .quantity-cart{
-        content: '';
-        position: absolute;
-
+      .cart-wrapper{
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 11px; font-weight: bold;
-
-        background-color: $orange;
-        color: $white;
-
-        border-radius: 8px;
-        width: 21px; height: 14px;
-
-        top: 0; left: 8px;
-        
-      }
-
-      img{
         cursor: pointer;
-      
-        &.cart{ width: 24px; }
+        position: relative;
 
-        &.avatar{ width: 28px; }
+        .quantity-cart{
+          content: '';
+          position: absolute;
+  
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          font-size: 11px; font-weight: bold;
+  
+          background-color: $orange;
+          color: $white;
+  
+          border-radius: 8px;
+          width: 21px; height: 14px;
+  
+          top: -6px; left: 8px;
+          
+        }
 
+        img.cart{ width: 23px; }
+
+        .cart-box{
+          position: absolute;
+
+          background-color: $white;
+          // border: 1px solid rgba(182, 188, 200, 0.4);
+          border-radius: 10px;
+          box-shadow: 2px 24px 44px -20px rgba(0, 0, 0, 0.75);
+
+          width: 90vw; height: fit-content;
+          top: 20px; left: calc(-40vw + 68px + 10%);
+
+          transform: translate(-50vw, -20px);
+
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          opacity: 0; visibility: hidden;
+
+          .cart-title{
+            display: block;
+            border-bottom: 1px solid rgb(182,188,200,0.4);
+            
+            font-size: 14px; font-weight: 600;
+            
+            padding: 14px;
+            width: 100%;
+          }
+
+          .info-cart{
+            display: flex;
+            justify-content: space-between; align-items: center;
+            gap: 10px;
+
+            padding: 14px;
+
+            img.thumbmail-img{ 
+              border-radius: 5px;
+              height: auto; width: 40px;
+            }
+
+            .description-price{
+              p.description, p.price{
+                color: $dark-grayish-blue;
+
+                span.bold{ 
+                  font-weight: 600;
+                  color: $black; 
+                }
+
+              }
+            }
+
+            img.delete-icon{ 
+              cursor: pointer;
+              height: 15px; width: auto; 
+            }
+
+          }
+
+          button.checkout{
+            margin: 20px;
+            width: calc(100% - 40px);
+          }
+
+        }
+
+        &:hover{
+          .cart-box{
+            transform: translate(-50vw, 0);
+            opacity: 1; visibility: visible;
+          }
+        }
+
+      } 
+  
+      img.avatar{ 
+        cursor: pointer;
+        width: 28px; 
       }
+
     }
     
   }
@@ -209,25 +286,37 @@
       }
 
       &.right{
-        position: relative;
         gap: 30px;
 
-        .quantity-cart{ top: 5px; }
+        .cart-wrapper{
 
-        img{
-          &.cart{
-            width: 23px;
+          .quantity-cart{ top: -5px; }
+
+          .cart-box{
+            left: -233px;
+            width: 330px;
+            transform: translateY(-20px);
           }
-          &.avatar{ 
-            border: solid 2px transparent;
-            border-radius: 50%; 
-            width: 44px;
-            transition: border .3s ease-in-out;
-            
-            &:hover{ border: solid 2px $orange; }
-          
+
+          &:hover{
+            .cart-box{
+              transform: translateY(0);
+              opacity: 1; visibility: visible;
+            }
           }
+
         }
+
+        img.avatar{ 
+          border: solid 2px transparent;
+          border-radius: 50%; 
+          width: 44px;
+          transition: border .3s ease-in-out;
+          
+          &:hover{ border: solid 2px $orange; }
+        
+        }
+
       }
   
     }

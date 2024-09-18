@@ -1,4 +1,5 @@
 import { dbLinks } from '../data/menu-link.js';
+import { Cart } from './Cart.jsx';
 
 export const Header = ({activeMenu, setActiveMenu}) => {
 
@@ -33,17 +34,27 @@ export const Header = ({activeMenu, setActiveMenu}) => {
         </div>
 
         <div className="header-side right">
-          <span className='quantity-cart'>3</span>
-          <img 
-            src={`/images/icon-cart.svg`} 
-            alt="Imagen del carrito" 
-            className="cart"
-          />
+
+          <div className="cart-wrapper">
+
+            <span className='quantity-cart'>3</span>
+            <img 
+              src={`/images/icon-cart.svg`} 
+              alt="Imagen del carrito" 
+              className="cart"
+            />
+            <div className="cart-box">
+              <Cart />
+            </div>
+
+          </div>
+          
           <img 
             src={`/images/image-avatar.png`} 
             alt="Imagen del avatar del usuario" 
             className="avatar"
           />
+          
         </div>
       
       </header>

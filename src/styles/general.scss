@@ -1,5 +1,6 @@
 //Primary
 $orange: hsl(26, 100%, 55%);
+$orange-hover: hsl(26, 100%, 74%);
 $pale-orange: hsl(25, 100%, 94%);
 
 //Neutral
@@ -45,11 +46,11 @@ body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ul {
   padding: 0;
 }
 
-h1, p , ul, li{
+h1, p , ul, li, span, button{
   font-family: 'Kumbh Sans';
 }
 
-p{ font-size: 16px; }
+p, button{ font-size: 16px; }
 
 ul{
   li{
@@ -69,4 +70,20 @@ ul{
   padding: 0 5%;
   max-width: 1340px;
   width: 100%;
+}
+
+.oragen-button{
+  background-color: $orange;
+  border: unset; border-radius: 5px;
+
+  cursor: pointer;
+  color: $black; font-weight: 600;
+  transition: background-color .3s ease-in-out;
+  padding: 13px;
+  width: 100%;
+
+  &:hover{
+    background-color: $orange-hover;
+  }
+
 }
