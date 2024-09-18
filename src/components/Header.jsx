@@ -1,6 +1,8 @@
 import { dbLinks } from '../data/menu-link.js';
 import { Cart } from './Cart.jsx';
 
+import { v4 as uuidv4 } from 'uuid';
+
 export const Header = ({activeMenu, setActiveMenu}) => {
 
   const handleToggle = () => {
@@ -27,7 +29,7 @@ export const Header = ({activeMenu, setActiveMenu}) => {
 
           <ul className="wrapper-links-desktop">
             { dbLinks.map( (link) => (       
-              <li className="single-link">{link.name}</li>
+              <li key={uuidv4()} className="single-link">{link.name}</li>
             )) }
           </ul>
 
