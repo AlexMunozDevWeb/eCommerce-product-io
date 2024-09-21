@@ -1,0 +1,124 @@
+#product-details{
+  
+  //Product gallery component
+  .swiper{
+    max-height: 470px;
+
+    .swiper-wrapper{
+      
+      .swiper-slide{
+        
+        .slide-img{
+          display: block;
+          width: 100%;
+        }
+
+      }
+
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+      border-radius: 50%;
+      background-color: $white;
+
+      top: calc(50% - (35px / 2));
+
+      height: 35px; width: 35px;
+
+      &::after{
+        content: '';
+
+        background-size: cover;
+        background-position: center;
+        
+        top: 0; left: 0;
+
+        height: 12px; width: 12px;
+      }
+    }
+    .swiper-button-next::after{
+      background-image: url('/images/icon-next.svg');
+    }
+    .swiper-button-prev::after{
+      background-image: url('/images/icon-previous.svg');
+    }
+
+  }
+
+  //Product details component
+  .detail-product{
+    margin: 20px 0 60px;
+
+    .name-description{
+      .product-name{
+        margin: 17px 0;
+  
+      }
+      p {
+        color: $dark-grayish-blue;
+      }
+      .company{
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .description{
+        font-size: 13px;
+        line-height: 21px;
+      }
+    }
+
+    .quantity-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 17px 0;
+
+      .price{
+        display: flex; 
+        align-items: center;
+        gap: 10px;
+
+        .amount{
+          color: $black;
+          font-size: 20px;
+        }
+        .percentage{
+          background-color: $black;
+          font-size: 11px;
+          color: $white;
+          border-radius: 5px;
+          padding: 3px 6px;
+        }
+      }
+
+      .discount{
+        color: $dark-grayish-blue;
+        text-decoration: line-through;
+      }
+
+    }
+
+    .select-item{
+      form{
+        .row{
+          .orange-button{
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+
+            .cart{
+              filter: grayscale(100%) brightness(0%);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @media(min-width: 960px){
+    margin: 55px 25px;
+  } 
+
+}

@@ -20,7 +20,7 @@ export const Cart = () => {
           alt="" />
       
       </div>
-      <button className="oragen-button checkout">Checkout</button>
+      <button className="orange-button checkout">Checkout</button>
     </>
   )
 }
